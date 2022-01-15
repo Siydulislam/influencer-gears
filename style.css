@@ -1,0 +1,279 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+}
+
+/* =========================
+=========Common CSS=========
+========================= */
+
+.container{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 30px;
+}
+
+.logo{
+    color: #3A3A3A;
+    font-size: 20px;
+}
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    height: 80px;
+    align-items: center;
+}
+
+.navigation{
+    display: flex;
+}
+
+.navigation li{
+    list-style: none;
+    margin: 10px;
+}
+
+.navigation li a{
+    text-decoration: none;
+    color: #3A3A3A;
+    font-weight: 600;
+    padding: 15px 10px;
+}
+
+#nav-toggler{
+    display: none;
+}
+
+.nav-toggler-icon{
+    display: none;
+    color: black;
+    font-size: 30px;
+}
+
+.primary-button{
+    padding: 15px 20px;
+    background-color: #3A3A3A;
+    color: #fff;
+    font-size: 18px;
+    border-radius: 50px;
+    cursor: pointer;
+    display: inline-block;
+}
+
+.primary-button:hover{
+    color: #3A3A3A;
+    background-color: white;
+}
+
+.banner{
+    height: calc(100vh - 80px);
+    min-height: 500px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.banner-left{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.banner-left h1{
+    font-size: 45px;
+    color: #3A3A3A;
+}
+
+.banner-left-para{
+    color: #3A3A3A;
+    font-size: 18px;
+    line-height: 1.5;
+    margin: 20px 0;
+}
+
+.banner-right{
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.banner-right img{
+    width: 100%;
+}
+
+.section-title{
+    text-align: center;
+}
+
+.section-title h2{
+    color: #3A3A3A;
+    font-size: 40px;
+    display: inline-block;
+    margin: 50px 0;
+}
+
+.collection{
+    display: grid;
+    gap: 30px;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-content: center;
+}
+
+.card{
+    width: 360px;
+    padding: 30px;
+    border-radius: 5px;
+    box-shadow: 0 30px 35px rgba(0,0,0,.2);
+}
+
+.card h3{
+    font-size: 30px;
+    color: #3A3A3A;
+}
+
+.card p{
+    font-size: 20px;
+    color: #3A3A3A;
+}
+
+.see-more-button{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    margin-top: 50px;
+    color: #3A3A3A;
+    cursor: pointer;
+}
+
+.ratings{
+    display: flex;
+}
+
+.contact-right form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.text-field{
+    width: 75%;
+    margin: 10px 0;
+    padding: 10px;
+    font-size: 18px;
+    font-family: inherit;
+    outline: 0;
+    border: 1px solid #FF008E;
+}
+
+.submit-button{
+    padding: 15px 25px;
+    background-color: #3A3A3A;
+    color: #fff;
+    font-size: 18px;
+    border-radius: 20px;
+    cursor: pointer;
+    display: inline-block;
+}
+
+footer{
+    color: white;
+    margin-top: 50px;
+    text-align: center;
+    background: #0B0D17;
+    padding: 10px;
+}
+
+@media (max-width:1200px) {
+    .banner{
+        grid-template-columns: 1fr;
+        height: fit-content;
+    }
+
+    .banner-left{
+        order: 2;
+        padding: 50px 0;
+        align-items: center;
+    }
+
+    .banner-right img{
+        width: 80%;
+        text-align: center;
+    }
+
+    .collection{
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+
+@media (max-width:1000px){
+    .banner{
+        grid-template-columns: 1fr;
+        height: fit-content;
+    }
+
+    .banner-left{
+        order: 2;
+        padding: 50px 0;
+        align-items: center;
+    }
+
+    .collection{
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width:800px){
+
+    .banner{
+        grid-template-columns: 1fr;
+        height: fit-content;
+    }
+
+    .collection{
+        grid-template-columns: 1fr;
+    }
+
+    .banner-left{
+        order: 2;
+        padding: 50px 0;
+        text-align: center;
+    }
+
+    .nav-toggler-icon{
+        display: block;
+    }
+    
+    .navigation{
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        background-color: #fff;
+        padding: 20px 0;
+        transform: translateY(-400px);
+        transition: .5s ease-in-out;
+    }
+    
+    .navigation li a{
+        color: #121212;
+    }
+    
+    #nav-toggler:checked ~ .navigation{
+        transform: translateY(0px);
+    }
+}
+
